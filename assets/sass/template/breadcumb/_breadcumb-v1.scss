@@ -1,0 +1,82 @@
+.breadcumb-title {
+    color: $white-color;
+    margin: -0.15em 0 -0.15em 0;
+    line-height: 1.1;
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: -2.4px;
+    z-index: 1;
+    position: relative;
+
+    @include ml {
+        font-size: 70px;
+    }
+
+    @include lg {
+        font-size: 60px;
+    }
+
+    @include sm {
+        font-size: 56px;
+    }
+
+    @include xs {
+        font-size: 40px;
+    }
+}
+
+.breadcumb-wrapper {
+    background-size: cover !important;
+    padding: 230px 0;
+    overflow: hidden;
+    position: relative;
+    z-index: auto;
+
+    @include md {
+        margin-top: 98px;
+        padding: 80px 0;
+    }
+
+    @include xs {
+        margin-top: 88px;
+    }
+
+    @include xs {
+        text-align: center;
+    }
+
+    .big-title img {
+        max-width: 366px;
+        border-radius: 0;
+
+        @include md {
+            max-width: 120px;
+        }
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    // @include sm {
+    //     text-align: center;
+    // }
+    &.style2 {
+        background: $border-color;
+        padding: 24px 36px;
+        text-align: start;
+
+        &:after {
+            display: none;
+        }
+    }
+}
+
+
+
+
+@include sm {
+    .breadcumb-title {
+        letter-spacing: normal;
+    }
+}

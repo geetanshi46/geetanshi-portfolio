@@ -1,0 +1,141 @@
+:root {
+  --theme-color: #DDB166;
+  --title-color: var(--white-color);
+  --body-color: var(--gray-color);
+  --black-color: #171717;
+  --black-color2: #222222;
+  --gray-color: #AAAAAA;
+  --white-color: #ffffff;
+  --light-color: #9fa2ad;
+  --yellow-color: #FFB539;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --border-color: rgba(255, 255, 255, 0.10);
+  --title-font: "Manrope", sans-serif;
+  --title-font2: "Playfair Display", serif;
+  --body-font: "Manrope", sans-serif;
+  --icon-font: "Font Awesome 6 Pro";
+  --main-container: 1320px;
+  --container-gutters: 24px;
+  --section-space: 120px;
+  --section-space-mobile: 80px;
+  --section-space-small-mobile: 60px;
+  --section-title-space: 65px;
+  --ripple-ani-duration: 5s;
+}
+
+// Color Variation
+$theme-color: var(--theme-color);
+$title-color: var(--title-color);
+$body-color: var(--body-color);
+$black-color: var(--black-color);
+$black-color2: var(--black-color2);
+$gray-color: var(--gray-color);
+$white-color: var(--white-color);
+$light-color: var(--light-color);
+$yellow-color: var(--yellow-color);
+$success-color: var(--success-color);
+$error-color: var(--error-color);
+$border-color: var(--border-color);
+
+// Font Variation
+$icon-font: var(--icon-font);
+
+// Typography
+$title-font: var(--title-font);
+$title-font2: var(--title-font2);
+$body-font: var(--body-font);
+$body-font-size: 16px;
+$body-line-Height: 26px;
+$body-font-weight: 400;
+$p-line-Height: 1.75;
+$p-font-size2: 18px;
+$p-line-height2: 28px;
+
+// Device Variation Breakpoints
+$hd: 1921px;       // Larger than 1920px
+$xxl: 1500px;      // Extra large devices
+$ml: 1399px;       // Medium-large devices
+$xl: 1299px;       // Medium-large devices
+$lg: 1199px;       // Large devices (Laptop)
+$md: 991px;        // Medium devices
+$sm: 767px;        // Small devices
+$xs: 575px;        // Extra small devices
+$vxs: 375px;       // Very small devices
+
+// Laptop Breakpoints
+$laptop-l: 1280px; // Nest Hub Max
+$laptop-m: 1024px; // Nest Hub
+$laptop-s: 912px;  // Surface Pro 7
+
+// Tablet Breakpoints
+$tablet-l: 853px;  // Asus Zenbook Fold
+$tablet-m: 820px;  // iPad Air
+$tablet-s: 540px;  // Surface Duo
+
+// Mobile Breakpoints
+$mobile-xl: 430px; // iPhone 14 Pro Max
+$mobile-l: 414px;  // iPhone XR, Pixel 7, Galaxy S20 Ultra, Galaxy A51/71
+$mobile-m: 390px;  // iPhone 12 Pro
+$mobile-s: 360px;  // Samsung Galaxy S8+
+
+// Spacing Count with 5x
+$space-count: 60;
+
+// Section Space  For large Device
+$space: var(--section-space);
+$space-extra: calc(var(--section-space) - 30px);
+$space-extra2: calc(var(--section-space) - 40px);
+
+// Section Space On small Device
+$space-mobile: var(--section-space-mobile);
+$space-small-mobile: var(--section-space-small-mobile);
+$space-mobile-extra: calc(var(--section-space-mobile) - 30px);
+
+
+// BG Color Mapping 
+$bgcolorMap: ();
+$bgcolorMap: map-merge((
+        "theme" : $theme-color,
+        "theme2" : $black-color2,
+        "white" : $white-color,
+        "black" : $black-color,
+        "gray" : $gray-color,
+        "title" : $title-color,
+), $bgcolorMap);
+
+
+// Overlay Color Mapping 
+$overlaycolorMap: ();
+$overlaycolorMap: map-merge((
+        "theme" : $theme-color,
+        "theme2" : $black-color2,
+        "title" : $title-color,
+        "white" : $white-color,
+        "black" : $black-color,
+        "overlay1" : #131B23,
+), $overlaycolorMap);
+
+
+// Text Color Mapping 
+$textColorsMap: ();
+$textColorsMap: map-merge((
+        "theme" : $theme-color,
+        "theme2" : $black-color2,
+        "title" : $title-color,
+        "body" : $body-color,
+        "white" : $white-color,
+        "light" : $light-color,
+        "yellow" : $yellow-color,
+        "success" : $success-color,
+        "error" : $error-color),
+        $textColorsMap);
+
+
+// Font Mapping 
+$fontsMap: ();
+$fontsMap: map-merge((
+        "icon" : $icon-font,
+        "title" : $title-font,
+        "body" : $body-font,
+), $fontsMap);

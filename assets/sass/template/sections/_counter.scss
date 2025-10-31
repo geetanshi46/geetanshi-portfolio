@@ -1,0 +1,55 @@
+/*=== Counter Area One =======================*/
+.counter-wrap {
+    padding: 0 0 60px;
+    border-bottom: 1px solid $border-color;
+}
+
+.counter-box {
+    max-width: 200px;
+
+    &_number {
+        font-size: 90px;
+        line-height: 100px;
+        font-style: italic;
+        font-weight: 700;
+        color: $title-color;
+        font-family: $title-font2;
+        margin-bottom: 25px;
+        margin-top: -15px;
+    }
+
+    &_title {
+        font-size: 18px;
+        line-height: 28px;
+        color: $gray-color;
+        margin-bottom: 0;
+
+        @include laptop-s {
+            font-size: 16px;
+        }
+    }
+}
+
+@include ml {
+    .counter-box_number {
+        font-size: 70px;
+    }
+}
+
+@include lg {
+    .counter-box_number {
+        margin-top: -0.28em;
+        margin-bottom: 15px;
+    }
+}
+
+@include sm {
+    .counter-box_number {
+        font-size: 60px;
+    }
+
+    .counter-box {
+        max-width: none;
+        text-align: center;
+    }
+}

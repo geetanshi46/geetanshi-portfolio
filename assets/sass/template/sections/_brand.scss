@@ -1,0 +1,136 @@
+/*----------------------------------------*/
+/* Brand css
+/*----------------------------------------*/
+$brand-prefix: 'brand';
+
+.brand-area {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $border-color;
+    @media (max-width:436px) {
+      top: 37px;
+    }
+  }
+
+  .title-area {
+    .title {
+      display: inline-block;
+      padding: 10px 28px;
+      border: 1px solid $border-color;
+      border-radius: 30px;
+      background: $black-color;
+      font-weight: 500;
+      position: relative;
+    }
+  }
+}
+
+// .#{$brand-prefix} {
+//     &-item {
+//         padding: 45px 0;
+//         border: 1px solid $border-color;
+//         border-radius: 100px;
+//     }
+
+//     &-icon span {
+//         display: inline-block;
+//         width: 100px;
+//         height: 100px;
+//         line-height: 100px;
+//         background: #fff;
+//         border-radius: 50%;
+//     }
+
+//     &-count {
+//         font-size: 42px;
+//         font-weight: 700;
+//         line-height: 52px;
+//     }
+
+//     &-title {
+//         font-size: 18px;
+//         line-height: 22px;
+//         margin-bottom: 0;
+//     }
+// }
+
+.brands-carousel {
+  position: relative;
+
+  .brand-item {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+
+    a {
+      position: relative;
+      display: block;
+      border: 1px solid $border-color;
+      padding: 35px 0;
+      border-radius: 10px;
+      transition: all 300ms ease;
+
+      &:hover img {
+        opacity: 1;
+      }
+
+    }
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      transition: all 0.3s ease;
+    }
+
+    .image {
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      transition: all 300ms ease;
+
+      &:hover img:first-child {
+        transform: translateX(0) scaleX(1);
+        opacity: 1;
+        filter: blur(0) grayscale(0) brightness(100%);
+        transition: all 0.3s ease;
+      }
+
+      &:hover img:nth-child(2) {
+        transform: translateX(-50%) scaleX(2);
+        opacity: 0;
+        filter: blur(10px);
+      }
+    }
+
+    img:first-child {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      margin: auto;
+      transform: translateX(50%) scaleX(2);
+      opacity: 0;
+      filter: blur(10px);
+    }
+  }
+
+  .brand--item {
+    text-align: center;
+  }
+}
+
+
+@include lg {}

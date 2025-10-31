@@ -1,0 +1,213 @@
+/*=== Marquee Area =======================*/
+.marquee-wrap {
+    background: var(--black-color2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 0;
+    border-right: 0;
+    padding: 40px 0;
+    cursor: pointer;
+
+    .marquee__group {
+        .m-item {
+            margin-right: 30px;
+            display: inline;
+            color: $white-color;
+            font-size: 48px;
+            line-height: 58px;
+            font-weight: 700;
+            font-family: $title-font;
+
+            .icon {
+                display: inline-block;
+                margin-right: 25px;
+
+                img {
+                    animation: rotate 20s infinite linear;
+
+                    &:hover {
+                        animation-play-state: paused;
+                    }
+                }
+
+                @keyframes rotate {
+                    from {
+                        transform: rotate(0deg);
+                    }
+
+                    to {
+                        transform: rotate(-360deg);
+                    }
+                }
+
+            }
+
+            @include sm {
+                font-size: 30px;
+
+            }
+        }
+
+        .m-item.style-2 {
+            color: $black-color2;
+            text-shadow:
+                -1px -1px 0 $white-color,
+                1px -1px 0 $white-color,
+                -1px 1px 0 $white-color,
+                1px 1px 0 $white-color;
+        }
+    }
+
+    &.style-2 {
+        padding: 45px 0;
+
+        .marquee__group {
+            .m-item {
+                color: $black-color2;
+                font-size: 52px;
+                line-height: 62px;
+
+            }
+        }
+
+        .m-item.style-2 {
+            color: $theme-color;
+            text-shadow:
+                -1px -1px 0 $black-color2,
+                1px -1px 0 $black-color2,
+                -1px 1px 0 $black-color2,
+                1px 1px 0 $black-color2;
+        }
+    }
+}
+
+
+/*=== About Area =======================*/
+.about-area {
+    .about_content {
+        margin-left: 200px;
+        margin-right: 30px;
+
+        .about-text {
+            font-size: 18px;
+            line-height: 28px;
+            color: $gray-color;
+        }
+    }
+
+    .img-btn a {
+        font-size: 16px;
+        font-weight: 600;
+
+        & img {
+            padding-left: 15px;
+        }
+    }
+}
+
+@include ml {
+    .about-area .about_content {
+        margin-left: 150px;
+    }
+}
+
+@include xl {
+    .about-area .about_content {
+        margin-left: 50px;
+    }
+}
+
+@include lg {
+    .about-area .about_content {
+        margin-left: 0;
+    }
+}
+
+@include md {
+    .about-content-wrap {
+        .about_content {
+            margin: 0;
+        }
+
+        .img-btn {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/*=== About Area Two =======================*/
+.about-area.style-two {
+    .about-info-box {
+        .inner {
+            position: relative;
+            padding: 35px;
+            font-size: 18px;
+            line-height: 18px;
+            border-radius: 10px;
+            border: 1px solid $border-color;
+
+            .title {
+                color: $gray-color;
+            }
+
+            .text {
+                color: $white-color;
+                font-weight: 600;
+                margin-bottom: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+/*About Hero Inner Page 1 ===============*/
+.about-hero {
+    position: relative;
+    padding-top: 236px;
+
+    @include md {
+        padding-top: 174px;
+        padding-bottom: 0;
+    }
+
+    @include sm {
+        text-align: center;
+    }
+
+    @include xs {
+        padding-top: 165px;
+    }
+
+    @include vxs {
+        padding-top: 135px;
+    }
+
+    .text {
+        font-size: 48px;
+        line-height: 1.23;
+        color: $white-color;
+        text-transform: uppercase;
+
+        .font2 {
+            color: $theme-color;
+            font-weight: 700;
+        }
+
+        @include md{
+            font-size: 34px;
+        }
+
+        @include sm {
+            font-size: 25px;
+        }
+
+        @include xs{
+            font-size: 20px;
+        }
+    }
+
+    .thumb {
+        img {
+            border-radius: 10px;
+        }
+    }
+}

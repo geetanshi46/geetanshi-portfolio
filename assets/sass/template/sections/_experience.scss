@@ -1,0 +1,205 @@
+/*=== Experience Area One =======================*/
+.experience-area {
+    .title-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include sm {
+            flex-direction: column;
+
+            .sec-title {
+                margin-bottom: 30px !important;
+            }
+        }
+    }
+}
+
+.experience-wrap-area {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .single-experience-list {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px 0 30px;
+        position: relative;
+        z-index: 1;
+
+        @include mobile-xl {
+            flex-wrap: wrap;
+        }
+
+        @include mobile-m {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 0;
+            background-color: var(--theme-color);
+            height: 1px;
+            z-index: -1;
+            opacity: 0;
+            transition: all 500ms ease;
+        }
+
+        &:hover::before {
+            width: 100%;
+            opacity: 1;
+        }
+
+        &:first-child {
+            border-top: 1px solid rgb(255, 255, 255, .1);
+        }
+
+        .experience-place {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 600;
+            color: $title-color;
+            transition: 1.0s;
+        }
+
+        .experience-year,
+        .experience-tag {
+            font-size: 18px;
+            line-height: 28px;
+            color: $gray-color;
+            letter-spacing: -0.14px;
+            transition: 1.0s;
+        }
+
+        &:hover {
+            .experience-place {
+                transform: translate3d(1.5rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+            }
+
+            .experience-year {
+                transform: translate3d(-1.5rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+            }
+        }
+    }
+
+    &.style-2 {
+        .single-experience-list {
+            .experience-place {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            @include xs {
+                text-align: center;
+
+                .left {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+    }
+}
+
+.about-area.style-two {
+    .about-experience-wrapper {
+        .inner {
+            @include md {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                gap: 30px;
+            }
+
+            @include sm {
+                gap: 0;
+                flex-direction: column;
+                margin-bottom: 22px;
+                text-align: center;
+            }
+        }
+
+        .year {
+            font-size: 130px;
+            line-height: 140px;
+            font-weight: 800;
+            color: $theme-color;
+            margin-bottom: 40px;
+
+            @include md {
+                margin-bottom: 0;
+            }
+        }
+
+        .text {
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 700;
+            color: $white-color;
+            position: relative;
+            padding-left: 90px;
+            width: 80%;
+            margin-bottom: 0;
+
+            @include ml {
+                width: 100%;
+            }
+
+            @include lg {
+                padding-left: 0;
+            }
+
+            @include md {
+                margin-bottom: 0;
+                flex: 1;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 20px;
+                left: 0;
+                width: 70px;
+                height: 3px;
+                background-color: $white-color;
+
+                @include lg {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    .experience-wrapper .title {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 600;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+
+        @include md {
+            text-align: center;
+        }
+    }
+}
+
+@include sm {
+    .experience-wrap-area .single-experience-list:hover {
+        .experience-place {
+            transform: none;
+        }
+
+        .experience-year {
+            transform: none;
+        }
+    }
+}

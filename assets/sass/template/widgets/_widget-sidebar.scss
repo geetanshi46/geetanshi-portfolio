@@ -1,0 +1,96 @@
+.widget {
+    margin-bottom: 30px;
+    position: relative;
+    padding: var(--widget-padding-x, 40px);   
+    background: $white-color;
+    border: 1px solid #E3E5DE;
+    border-radius: 0px;
+    &[data-overlay]:before {
+        z-index: -1;
+    }
+}
+
+.widget {
+    &.widget_search {
+        padding: 0;
+        border: 0;
+    }
+    .search-form {
+        position: relative;
+        display: flex;
+        input {
+            background: $white-color;
+            border: 1px solid #E3E5DE;
+            flex: 1;
+            color: $body-color;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 0px;
+            padding: 0 60px 0 30px;
+            &::placeholder {
+                color: $body-color;
+            }
+        }
+        button {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            border: none;
+            font-size: 14px;
+            background-color: transparent;
+            color: $white-color;
+            display: inline-block;
+            height: 55px;
+            width: 55px;
+            line-height: 55px;
+            border-radius: 0px;
+        }
+        &:hover {
+            button {
+                color: $title-color;
+            }
+        }
+    }
+}
+
+.sidebar-widget {
+    .widget-box {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 35px 35px 40px;
+        border-radius: 0;
+        background-color: $gray-color;
+
+        @include nestHub {
+            padding: 35px 25px 40px;
+        }
+
+        @include vxs {
+            padding: 35px 25px 40px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .sidebar-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: $black-color;
+        padding-left: 12px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 6px;
+            width: 2px;
+            height: 20px;
+            background: $theme-color;
+        }
+    }
+}

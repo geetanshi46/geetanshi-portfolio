@@ -1,0 +1,169 @@
+/*=============================
+    service Details
+===============================*/
+.service__inner-wrap .row .col-80 {
+    width: 70.5%;
+    flex: 0 0 auto;
+}
+
+@include lg {
+    .service__inner-wrap .row .col-80 {
+        width: 67.5%;
+    }
+}
+
+@include md {
+    .service__inner-wrap .row .col-80 {
+        width: 100%;
+    }
+}
+
+.service__inner-wrap .row .col-20 {
+    width: 29.5%;
+    flex: 0 0 auto;
+}
+
+@include lg {
+    .service__inner-wrap .row .col-20 {
+        width: 32.5%;
+    }
+}
+
+@include md {
+    .service__inner-wrap .row .col-20 {
+        width: 100%;
+    }
+}
+
+@include md {
+    .service__sidebar {
+        margin-top: 35px;
+    }
+}
+
+/*====== service Details Area ==============*/
+.service__details-wrap {
+    border-radius: 10px;
+    padding: 35px;
+    border: 1px solid $border-color;
+
+    @include mobile-xl {
+        padding: 25px;
+    }
+}
+
+
+.service__details-thumb {
+    margin-bottom: 25px;
+
+    img {
+        border-radius: 10px;
+        min-height: 250px;
+        object-fit: cover;
+    }
+}
+
+
+.service__details-content>.title {
+    font-size: 30px;
+    line-height: 1.33;
+    color: $white-color;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+
+    @include lg {
+        font-size: 28px;
+    }
+
+    @include sm {
+        font-size: 22px;
+    }
+}
+
+
+
+/*sidebar-widget**************/
+.service__sidebar {
+    .sidebar__widget {
+        background-color: $black-color;
+        padding: 35px;
+        border-radius: 10px;
+        margin-bottom: 35px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include mobile-xl {
+            padding: 25px;
+        }
+    }
+}
+
+.sidebar__service-list .list-wrap li {
+    margin-bottom: 25px;
+
+    a {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+        background-color: $black-color2;
+        padding: 16px 30px;
+        border-radius: 10px;
+        transition: all 300ms ease;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "\f054";
+            font-family: $icon-font;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 22px;
+
+            @include lg {
+                right: 15px;
+            }
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sidebar__contact-info {
+    .thumb img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .contact-info-list {
+        .item {
+            display: flex;
+            gap: 20px;
+            padding: 18px 0;
+            border-top: 1px solid $border-color;
+
+            &:last-child {
+                border-bottom: 1px solid $border-color;
+            }
+
+            .icon {
+                flex-shrink: 0;
+            }
+
+            .text {
+                @include nestHub {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+}

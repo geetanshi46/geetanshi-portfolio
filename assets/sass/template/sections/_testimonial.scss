@@ -1,0 +1,277 @@
+/* Testimonial Helper -------------------------------*/
+.review-list {
+  display: flex;
+  max-width: 147px;
+  padding: 10px 20px;
+  background-color: $black-color;
+  border-radius: 52px;
+
+  i {
+    font-size: 14px;
+    line-height: 20px;
+    color: $theme-color;
+    margin-right: 5px;
+  }
+}
+
+/* Testimonial 1 ---------------------------------- */
+.testimonial-area {
+  position: relative;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.testi-item {
+  border: 1px solid $border-color;
+  border-radius: 10px;
+
+  .testi-upper {
+    @include flex-center;
+    padding: 35px;
+
+    &_thumb {
+      flex-shrink: 0;
+
+      img {
+        border-radius: 70px;
+        object-fit: cover;
+      }
+    }
+
+    .testi-upper_info {
+      margin-left: 35px;
+
+      .title {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0 0 22px;
+      }
+
+      .text {
+        font-size: 18px;
+        line-height: 28px;
+        color: $gray-color;
+        margin: 0;
+      }
+    }
+  }
+
+  .testi-lower {
+    @include flex-center;
+    justify-content: space-between;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    padding: 25px 35px;
+
+    &_info {
+      .name {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .review-list {
+      @extend .review-list;
+    }
+  }
+}
+
+@include sm {
+  .testi-item {
+
+    .testi-upper,
+    .testi-lower {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .testi-upper {
+      padding: 20px;
+
+      .testi-upper_info {
+        margin-left: 0;
+      }
+
+      &_thumb {
+        margin-bottom: 20px;
+      }
+    }
+
+    .testi-lower {
+      padding: 20px;
+      text-align: center;
+
+      .review-list {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+/* Testimonial 2 ---------------------------------- */
+.testi-upper_area{
+  .testi-nav{
+    .testi-button-next,
+    .testi-button-prev{
+      display: inline-block;
+      width: 64px;
+      height: 64px;
+      line-height: 64px;
+      border-radius: 50%;
+      text-align: center;
+      background-color: $white-color;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      margin-right: 20px;
+      &::before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $theme-color;
+        transform: scale(0.8);
+        opacity: 0;
+        transition: all 300ms ease;
+      }
+      .testi-button-prev{
+        margin-right: 0;
+      }
+      &:hover::before{
+        opacity: 1;
+        transform: scale(1);
+      }
+      i{
+        font-size: 20px;
+        color: $black-color ;
+      }
+    }
+  }
+  @include vxs{
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@include xs {
+  .testi-nav {
+
+      .testi-button-next,
+      .testi-button-prev {
+          width: 48px;
+          height: 48px;
+          line-height: 48px;
+
+          i {
+              font-size: 16px;
+          }
+      }
+  }
+}
+
+@include vxs{
+  .testi-nav {
+
+      .testi-button-next,
+      .testi-button-prev {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+
+          i {
+              font-size: 14px;
+          }
+      }
+  }
+}
+
+
+.testi-single-box {
+  border-radius: 10px;
+  padding: 35px;
+  border: 1px solid $border-color;
+  @include vxs {
+    padding: 25px;
+  }
+
+  .testi-upper {
+    .review-list {
+      @extend .review-list;
+      border: 1px solid $border-color;
+    }
+
+    &_info {
+      margin: 30px 0 35px;
+
+      .text {
+        color: $gray-color;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0;
+      }
+    }
+  }
+
+  .testi-lower {
+    @include flex-center;
+    justify-content: space-between;
+
+    @include vxs {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    &_info {
+      display: flex;
+      align-items: center;
+
+      .thumb {
+        img {
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-right: 20px;
+          @include vxs {
+            width: 70px;
+            height: 70px;
+          }
+        }
+      }
+
+      .info-title {
+        .name {
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+
+        .title {
+          color: $gray-color;
+        }
+      }
+    }
+
+    &_quote {
+      .icon {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        background-color: $theme-color;
+        border-radius: 10px;
+      }
+    }
+  }
+}
